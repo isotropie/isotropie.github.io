@@ -87,7 +87,7 @@
 
 		imgRect = img.getBoundingClientRect();
 		pageRect = el.getBoundingClientRect();
-		el.scrollTop = imgRect.top - pageRect.top - 20;
+		el.scrollTop = imgRect.top - pageRect.top;
 
 		linkRect = link.getBoundingClientRect();
 		imgRect = img.getBoundingClientRect();

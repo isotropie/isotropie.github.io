@@ -37,7 +37,8 @@ header a:visited {
 }
 
 .main .gradient {
-	position: absolute;
+    display: none;
+    position: absolute;
 	top: 0px;
 	left: 0px;
 	z-index: 20;
