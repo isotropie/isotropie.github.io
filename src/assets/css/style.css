@@ -1,0 +1,225 @@
+body {
+	margin: 0px;
+}
+body.loading {
+	pointer-events: none;
+}
+
+header {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	font-family: Helvetica;
+	padding: 50px;
+}
+
+a {
+	outline: 0;
+}
+
+header a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: #000;
+}
+header a:visited {
+	color: #000;
+}
+
+.main {
+	position: absolute;
+	top: 125px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.main .gradient {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+	width: 100%;
+	height: 30px;
+	background-image: url('/assets/img/gradient.png');
+	background-repeat: repeat-x;
+}
+
+#include {
+	opacity: 1;
+	transition: opacity 200ms linear;
+}
+
+.home {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #FFF;
+}
+
+.home .sections {
+	margin: 0px auto;
+    text-align: center;
+    padding: 0px 50px;
+    max-width: 1100px;
+}
+
+.home section {
+	display: inline-block;
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	transition: transform 500ms cubic-bezier(0.520, 0.000, 0.000, 1.350);
+}
+
+.home section .bubble {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	border: 2px solid #000;
+	background-position: center center;
+	transition:
+		width 200ms ease-out,
+		height 200ms ease-out,
+		top 200ms ease-out,
+		left 200ms ease-out,
+		opacity 200ms linear,
+		transform 600ms cubic-bezier(0.520, 0.000, 0.000, 1.350);
+}
+.home section .bubble:hover {
+	width: 210px;
+	height: 210px;
+	top: -5px;
+	left: -5px;
+}
+.home section .bubble:active {
+	width: 220px;
+	height: 220px;
+	top: -10px;
+	left: -10px;
+}
+.home section.bibu-1 .bubble {
+	background-image: url('/assets/img/thumbs/section_bibu_1.png')
+}
+.home section.bibu-2 .bubble {
+	background-image: url('/assets/img/thumbs/section_bibu_2.png')
+}
+.home section.bibu-3 .bubble {
+	background-image: url('/assets/img/thumbs/section_bibu_3.png')
+}
+.home section.fleures-1 .bubble {
+	background-image: url('/assets/img/thumbs/section_fleures_1.png')
+}
+.home section.fleures-2 .bubble {
+	background-image: url('/assets/img/thumbs/section_fleures_2.png')
+}
+.home section.fleures-3 .bubble {
+	background-image: url('/assets/img/thumbs/section_fleures_3.png')
+}
+.home section.fleures-4 .bubble {
+	background-image: url('/assets/img/thumbs/section_fleures_4.png')
+}
+.home section.nawak-1 .bubble {
+	background-image: url('/assets/img/thumbs/section_nawak_1.png')
+}
+.home section.nawak-2 .bubble {
+	background-image: url('/assets/img/thumbs/section_nawak_2.png')
+}
+.home section.nawak-3 .bubble {
+	background-image: url('/assets/img/thumbs/section_nawak_3.png')
+}
+.home section.oiseau .bubble {
+	background-image: url('/assets/img/thumbs/section_oiseau.png')
+}
+.home section.taches-1 .bubble {
+	background-image: url('/assets/img/thumbs/section_taches_1.png')
+}
+.home section.taches-2 .bubble {
+	background-image: url('/assets/img/thumbs/section_taches_2.png')
+}
+.home section.taches-3 .bubble {
+	background-image: url('/assets/img/thumbs/section_taches_3.png')
+}
+.home section.ville-1 .bubble {
+	background-image: url('/assets/img/thumbs/section_ville_1.png')
+}
+.home section.ville-2 .bubble {
+background-image: url('/assets/img/thumbs/section_ville_2.png')
+}
+body.loading .home section .bubble {
+	opacity: 0.6;
+}
+body.loading .home section .bubble.loading {
+	opacity: 1;
+}
+.home section .bubble.animating,
+.home section .bubble.loading {
+	width: 200px;
+	height: 200px;
+	top: 0px;
+	left: 0px;
+}
+.home section .bubble.loading:before,
+.home section .bubble.loading:after {
+	content: '';
+	display: block;
+	position: absolute;
+	border: 10px solid transparent;
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	top: 0px;
+	left: 0px;
+	box-sizing: border-box;
+	animation: loading-circle 1300ms infinite;
+}
+.home section .bubble.loading:before {
+	border-bottom-color: rgba(255, 255, 255, 0.3);
+	animation-direction: reverse;
+	animation-duration: 1000ms;
+}
+.home section .bubble.loading:after {
+	border-top-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes loading-circle {
+	0% {
+		transform: rotate(0deg);
+	}
+	90% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.page {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	overflow: auto;
+	padding: 20px 50px;
+	background-color: #FFF;
+}
+
+.page section {
+	text-align: center;
+	max-width: 1200px;
+	margin: 0px auto;
+}
+.page section img {
+	max-width: 100%;
+}
