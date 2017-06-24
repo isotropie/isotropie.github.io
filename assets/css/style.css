@@ -14,15 +14,17 @@ a {
 }
 
 header .logo {
-	display: block;
-	width: 140px;
-	text-decoration: none;
-	color: #000;
-	font-size: 23px;
-	font-family: Helvetica;
-	text-transform: uppercase;
-	text-align: left;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    font-size: 32px;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
 }
+
 header .logo:visited {
 	color: #000;
 }
@@ -86,7 +88,7 @@ header .logo:visited {
 	width: 200px;
 	height: 200px;
 	border-radius: 100%;
-	border: 2px solid #000;
+	border: 6px solid #000;
 	background-position: center center;
 	transition:
 		width 200ms ease-out,
