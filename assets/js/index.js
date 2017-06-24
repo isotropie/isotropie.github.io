@@ -177,27 +177,31 @@
 	}
 
 	function waitForImages( cont, cb ) {
-		var imgs, img, counter;
+		var imgs, img, counter, err;
 		imgs = cont.querySelectorAll( 'img' );
 		counter = 1;
-		function loaded() {
+		function onLoaded() {
 			counter--;
 			if ( counter === 0 ) {
-				cb();
+				cb( err );
 			}
+		}
+		function onError( e ) {
+			err = e;
+			onLoaded();
 		}
 
 		if ( imgs && imgs.length ) {
 			for ( var i = 0, l = imgs.length; i < l; i++ ) {
-				img = imgs[ i ];
-				if ( !img.naturalWidth && !img.naturalHeight ) {
-					counter++;
-					img.onload = loaded;
-				}
+				counter++;
+				img = new Image();
+				img.onload = onLoaded;
+				img.onerror = onError;
+				img.src = imgs[ i ].src;
 			}
 		}
 		
 		// return immediately if no images need to be loaded
-		loaded();
+		onLoaded();
 	}
 })();
