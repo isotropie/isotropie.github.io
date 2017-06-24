@@ -6,31 +6,30 @@ body.loading {
 }
 
 header {
-	font-size: 40px;
-	font-weight: bold;
-	text-align: center;
-	font-family: Helvetica;
-	padding: 50px;
+	padding: 15px;
 }
 
 a {
 	outline: 0;
 }
 
-header a {
+header .logo {
 	display: block;
-	width: 100%;
-	height: 100%;
+	width: 140px;
 	text-decoration: none;
 	color: #000;
+	font-size: 23px;
+	font-family: Helvetica;
+	text-transform: uppercase;
+	text-align: left;
 }
-header a:visited {
+header .logo:visited {
 	color: #000;
 }
 
 .main {
 	position: absolute;
-	top: 125px;
+	top: 84px;
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
