@@ -5,6 +5,10 @@
 
 		document.addEventListener( 'click', onClick, false );
 		window.addEventListener( 'popstate', onPopState, false );
+
+		waitForImages( document.body, function () {
+			autoScroll();
+		} );
 	})()
 
 	function onPopState( e ) {
@@ -12,6 +16,12 @@
 	}
 
 	function autoScroll() {
+		var selector, el, scroller;
+		selector = document.location.hash;
+		if ( !selector ) return;
+		el = document.querySelector( selector );
+		if ( !el ) return;
+		el.scrollIntoView();
 	}
 
 	function onClick( e ) {
