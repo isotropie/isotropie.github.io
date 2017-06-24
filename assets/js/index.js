@@ -116,7 +116,8 @@
 		setTimeout( function () {
 			el.style.opacity = '1';
 			el.style.transition = 'clip-path 1000ms ease-in-out, transform 300ms linear';
-			el.style.clipPath = 'circle(' + window.innerWidth + 'px at ' + cx + 'px ' + cy + 'px)';
+			r = Math.max( window.innerWidth, window.innerHeight );
+			el.style.clipPath = 'circle(' + r + 'px at ' + cx + 'px ' + cy + 'px)';
 			link.style.display = 'none';
 			setTimeout( function () {
 				reset( link, el )
