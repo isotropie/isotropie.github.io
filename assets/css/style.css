@@ -113,6 +113,7 @@ header .logo:visited {
 	border-radius: 100%;
 	border: 0px solid #000;
 	background-position: center center;
+	box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.15);
 	transition:
 		width 200ms ease-out,
 		height 200ms ease-out,
