@@ -25,6 +25,29 @@ header .logo {
     text-align: center;
 }
 
+header .cv {
+    text-decoration: none;
+    color: #000;
+    font-size: 26px;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+    float: left;
+}
+
+header .about {
+    text-decoration: none;
+    color: #000;
+    font-size: 26px;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: right;
+    float: right;
+}
+
+
 header .logo:visited {
 	color: #000;
 }
@@ -88,7 +111,7 @@ header .logo:visited {
 	width: 200px;
 	height: 200px;
 	border-radius: 100%;
-	border: 6px solid #000;
+	border: 0px solid #000;
 	background-position: center center;
 	transition:
 		width 200ms ease-out,
