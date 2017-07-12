@@ -14,6 +14,7 @@ a {
 }
 
 header .logo {
+    /*background-image: url(/assets/img/logo.svg);*/
     display: block;
     width: 100%;
     text-decoration: none;
@@ -36,7 +37,7 @@ header .cv {
     float: left;
 }
 
-header .about {
+header .contact {
     text-decoration: none;
     color: #000;
     font-size: 26px;
@@ -143,17 +144,17 @@ header .logo:visited {
 .home section.bibu-3 .bubble {
 	background-image: url('/assets/img/thumbs/section_bibu_3.png')
 }
-.home section.fleures-1 .bubble {
-	background-image: url('/assets/img/thumbs/section_fleures_1.png')
+.home section.fleurs-1 .bubble {
+	background-image: url('/assets/img/thumbs/section_fleurs_1.png')
 }
-.home section.fleures-2 .bubble {
-	background-image: url('/assets/img/thumbs/section_fleures_2.png')
+.home section.fleurs-2 .bubble {
+	background-image: url('/assets/img/thumbs/section_fleurs_2.png')
 }
-.home section.fleures-3 .bubble {
-	background-image: url('/assets/img/thumbs/section_fleures_3.png')
+.home section.fleurs-3 .bubble {
+	background-image: url('/assets/img/thumbs/section_fleurs_3.png')
 }
-.home section.fleures-4 .bubble {
-	background-image: url('/assets/img/thumbs/section_fleures_4.png')
+.home section.fleurs-4 .bubble {
+	background-image: url('/assets/img/thumbs/section_fleurs_4.png')
 }
 .home section.nawak-1 .bubble {
 	background-image: url('/assets/img/thumbs/section_nawak_1.png')
@@ -248,4 +249,48 @@ body.loading .home section .bubble.loading {
 }
 .page section img {
 	max-width: 100%;
+}
+.page.cv {
+    width: 80%;
+    margin: 0 auto;
+}
+.page.cv section {
+    text-align: left;
+    font-family: Helvetica;
+    
+    
+}
+
+.page.cv section.skills,
+.page.cv section.languages {
+    float: left; 
+}
+.page.cv section.education {
+        clear: both;
+    overflow: hidden;
+
+}
+.page.cv h1 {
+    font-weight: bold;
+    color: darkslateblue;
+
+}
+
+.page.cv h2 {
+    font-size: 18px;
+
+
+}
+.page.cv li {
+    float:left;
+    width: 150px;
+}
+.page.cv ul {
+    width: 300px;
+    list-style: none;
+    padding: 0;
+}
+
+.page.cv li.bold {
+    font-weight: bold;
 }
