@@ -35,6 +35,7 @@ header .cv {
     font-weight: bold;
     text-align: left;
     float: left;
+    width: 130px;
 }
 
 header .contact {
@@ -46,6 +47,7 @@ header .contact {
     font-weight: bold;
     text-align: right;
     float: right;
+    width: 130px;
 }
 
 
@@ -250,7 +252,7 @@ body.loading .home section .bubble.loading {
 .page section img {
 	max-width: 100%;
 }
-.page.cv {
+.page.cv .cv-container {
     width: 80%;
     margin: 0 auto;
 }
@@ -293,4 +295,14 @@ body.loading .home section .bubble.loading {
 
 .page.cv li.bold {
     font-weight: bold;
+}
+
+.page.contact .form {
+    width: 800px;
+    margin: 0px auto;
+}
+
+.page.contact .form p {
+    font-size: 10px;
+    text-align: center;
 }
